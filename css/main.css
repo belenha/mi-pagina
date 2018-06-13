@@ -1,0 +1,143 @@
+/** Grid **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container-full {
+    width: 100%;
+}
+
+.container-full .row {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row::after, .row::before {
+    content:"";
+    display:table;
+    clear: both;
+}
+
+[class *='col-'] {
+    float: left;
+    min-height: 1em;
+    padding: 1em;
+}
+
+/** 100/12*columnas **/
+.col-1{ width:8.333333333333334%; }
+.col-2{ width:16.666666666666668%; }
+.col-3{ width:25%; }
+.col-4{ width:33.333333333333336%; }
+.col-5{ width:41.66666666666667%; }
+.col-6{ width:50%; }
+.col-7{ width:58.333333333333336%; }
+.col-8{ width:66.66666666666667%; }
+.col-9{ width:75%; }
+.col-10{ width:83.33333333333334%; }
+.col-11{ width:91.66666666666667%; }
+.col-12{ width:100%; }
+
+@media (max-width:600px){
+    [class *='col-'] {
+       width: 100%;
+    }
+    .hide-mobile {
+        display: none;
+    }
+}
+@media (min-width:600px){
+    .hide-desktop {
+        display: none;
+    }
+}
+
+/** estilo **/
+
+body{
+    font-family: 'Pavanam', sans-serif;
+}
+
+.name{
+    color: #dbffff;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+nav{
+    background-color: #75ccb9;
+    height: 60px;
+}
+
+nav::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.burger{
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.menu {
+    float:rigth;
+    text-align: right;
+}
+.menu li {
+    display:inline-block;
+    height:56px;
+    padding:20px 10px;
+}
+.menu a {
+    color: #003d33;
+    text-decoration: none;
+}
+.menu a:hover {
+    color:#fff;
+}
+
+header{
+    background-image: url("../assets/images/yoga1.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #dbffff;
+    text-align: left;
+}
+
+.top{
+    padding: 6em;
+}
+
+h1, h2, h3{
+    font-family: 'McLaren', cursive;
+}
+
+p{
+    text-align: justify;
+}
+
+section img{
+    border-radius: 50%;
+    height: auto;
+    width: 100%;
+}
+
+footer{
+    background-color: #75ccb9;
+    color: #003d33;
+    font-size: 1em;
+    height: 60px;
+    padding: 2em;
+    text-align: center;
+}
